@@ -6,9 +6,9 @@ People being able to discover your website when they search is important. This p
 
 Google, DuckDuckGo and others are proficient at understanding the content of websites. However, scraping HTML is not a highly reliable way to categorise content. HTML is about presentation and it can have all manner of different structures. To make the life of search engines easier, there's a standardized format known as "structured data" which can be embedded within a page. That standardized format allows you to explicitly declare the type of content the page contains.
 
-So let's say you've written an article, you can reliably state in a language that Google understands "this page is an article, it has this title, this description and image and was publised on this date". There are hundreds of types of structured data available, and you can read about all of them in depth at https://schema.org/ which is maintained by representatives of the search engine community.
+So let's say you've written an article, you can reliably state in a language that Google understands "this page is an article, it has this title, this description and image and was published on this date". There are hundreds of types of structured data available, and you can read about all of them in depth at https://schema.org/ which is maintained by representatives of the search engine community.
 
-It's worth knowing that whilst there are many types of structured data available to choose from, there are definitely more popular options and those that are more niche. So [Article](https://schema.org/Article) is likely to be used a great deal more than say [MolecularEntity](https://schema.org/MolecularEntity).
+It's worth knowing that whilst there are many types of structured data available to choose from, there are definitely more popular options and those that are more niche. So [Article](https://schema.org/Article) is likely to be used a great deal more than, perhaps, [MolecularEntity](https://schema.org/MolecularEntity).
 
 As well as there being different types of structured data, there also a variety of formats which can be used to provide it; these include [JSON-LD](http://json-ld.org/), [Microdata](https://www.w3.org/TR/microdata/) and [RDFa](https://rdfa.info/). Google explicitly prefer JSON-LD and so that's what we'll focus on. JSON-LD is effectively a rending of a piece of JSON inside a `script` tag with the custom type of `application/ld+json`.  For example: 
 
@@ -45,9 +45,9 @@ If we grab the content of one JSON-LD section and paste it into the devtools con
 
 ![screenshot of JSON-LD section transformed into a JavaScript Object Literal](images/single-structured-data-as-JSON.png)
 
-If you look at the `headline` property above you'll see it is `"Best ever chocolate brownies recipe"` and that matches up with headline displayed in the search results. Now we have a sense of what the various search engines are using as they categorise the page, and we understand exactly what is powering the carousel in the Google search results.
+If we look at the `headline` property above we can see it is `"Best ever chocolate brownies recipe"` and that matches up with headline that was displayed in the search results. This gives us a sense of what the various search engines are using as they categorise the page, and we understand exactly what is powering the carousel in the Google search results.
 
-Incidentally, there's a special name for this "carousel"; it i a "rich result". A rich result is a search result singled out for special treatment when displaying results.  Google provide a [Rich Results Test tool](https://search.google.com/test/rich-results) which allows you to validate if a site provides structured data which is eligible to be featured in rich results.  We'll make use of this later.
+Incidentally, there's a special name for this "carousel"; it is a "rich result". A rich result is a search result singled out for special treatment when it is displayed.  Google provide a [Rich Results Test tool](https://search.google.com/test/rich-results) which allows you to validate if a site provides structured data which is eligible to be featured in rich results.  We'll make use of this later.
 
 ## Adding structured data to a website
 
