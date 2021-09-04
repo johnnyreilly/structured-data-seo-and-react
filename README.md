@@ -45,7 +45,9 @@ If we grab the content of one JSON-LD section and paste it into the devtools con
 
 ![screenshot of JSON-LD section transformed into a JavaScript Object Literal](images/single-structured-data-as-JSON.png)
 
-If we look at the `@type` property we can see it's a `"Recipe"`. This means it's an example of the https://schema.org/Recipe schema. If we look further at the `headline` property, it reads `"Best ever chocolate brownies recipe"`. That matches up with headline that was displayed in the search results. This gives us a sense of what the various search engines are using as they categorise the page, and we understand exactly what is powering the carousel in the Google search results.
+If we look at the `@type` property we can see it's a `"Recipe"`. This means it's an example of the https://schema.org/Recipe schema. If we look further at the `headline` property, it reads `"Best ever chocolate brownies recipe"`. That matches up with headline that was displayed in the search results.
+
+Now we have a sense of what the various search engines are using as they categorise the page, and we understand exactly what is powering the carousel in the Google search results.
 
 Incidentally, there's a special name for this "carousel"; it is a "rich result". A rich result is a search result singled out for special treatment when it is displayed.  Google provide a [Rich Results Test tool](https://search.google.com/test/rich-results) which allows you to validate if a site provides structured data which is eligible to be featured in rich results.  We'll make use of this later.
 
