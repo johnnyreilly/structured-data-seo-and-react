@@ -1,6 +1,6 @@
 # Structured data, SEO and React
 
-When you've built an amazing website, people being able to discover it when they google is important. This post is about how you can add structured data to a site. Adding structured data will help the search engines like Google understand your content, and get it in front of more eyeballs. We'll illustrate this by making a simple React app which incorporates structured data.
+People being able to discover your website when they google is important. This post is about how you can add structured data to a site. Adding structured data will help the search engines like Google understand your content, and get it in front of more eyeballs. We'll illustrate this by making a simple React app which incorporates structured data.
 
 ## What is structured data?
 
