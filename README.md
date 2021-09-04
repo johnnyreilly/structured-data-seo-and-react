@@ -125,7 +125,7 @@ Now let's see if it supports structured data in the way we hope.
 
 ## Using the Rich Results Test
 
-If we go to https://search.google.com/test/rich-results we find the Rich Results Test tool. There's two ways you can test, providing a URL or providing code.  In our case we don't have a public facing URL and so we're going to use the HTML that React is rendering.
+If we go to https://search.google.com/test/rich-results we find the Rich Results Test tool. There's two ways you can test; providing a URL or providing code.  In our case we don't have a public facing URL and so we're going to use the HTML that React is rendering.
 
 In devtools we'll use the "copy outerHTML" feature to grab the HTML, then we'll paste it into Rich Results:
 
@@ -135,23 +135,6 @@ We hit the "TEST CODE" button and we see results that look like this:
 
 ![screenshot of the results of testing our site using the rich results tool](images/screenshot-of-rich-results-tool-test.png)
 
+So we've been successful in building a website that renders structured data. More than that, we're doing it in a way that we know Google will recognise and can use to render rich results in search. That's a really useful way to drive traffic to our website.
 
-
-
-
-
-Google do a good job of demostrating 
-
-https://developers.google.com/search/docs/advanced/structured-data/search-gallery
-
-https://github.com/facebook/docusaurus/pull/5322
-
-https://search.google.com/test/rich-results
-
-Structured data is a standardized format for providing information about a page and classifying the page content; for example, on a recipe page, what are the ingredients, the cooking time and temperature, the calories, and so on.
-
-A way to improve the discoverability of a website is through SEO (Search Engine Optimization). This post is about an aspect of that called structured
-
-
-There's a particular  
-a blog post on Structured Data, SEO and React
+This post has illustrated what it looks like to create an `Article`.  Google has some [great resources](https://developers.google.com/search/docs/advanced/structured-data/search-gallery) on other types that it supports and prioritises for rich results which should help you build the structured data you need for your particular content.
