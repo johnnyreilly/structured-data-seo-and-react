@@ -53,6 +53,93 @@ Incidentally, there's a special name for this "carousel"; it is a "rich result".
 
 ## Adding structured data to a website
 
+Now we'll make ourselves a React app and add structured data to it.  In the console we'll execute the following command:
+
+```
+npx create-react-app my-app
+```
+
+We now have a simple React app which consists of a single page. Let's replace the content of the existing `App.js` file with this:
+
+```jsx
+//@ts-check
+import "./App.css";
+
+function App() {
+  // https://schema.org/Article
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Structured data for you",
+    description: "This is an article that demonstrates structured data.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/40/JSON-LD.svg",
+    datePublished: new Date("2021-09-04T09:25:01.340Z").toISOString(),
+    author: {
+      "@type": "Person",
+      name: "John Reilly",
+      url: "https://twitter.com/johnny_reilly",
+    },
+  };
+
+  return (
+    <div className="App">
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
+
+      <h1>{articleStructuredData.headline}</h1>
+      <h3>
+        by{" "}
+        <a href={articleStructuredData.author.url}>
+          {articleStructuredData.author.name}
+        </a>{" "}
+        on {articleStructuredData.datePublished}
+      </h3>
+
+      <img
+        style={{ width: "5em" }}
+        alt="https://json-ld.org/ - Website content released under a Creative Commons CC0 Public Domain Dedication except where an alternate is specified., CC0, via Wikimedia Commons"
+        src={articleStructuredData.image}
+      />
+
+      <p>{articleStructuredData.description}</p>
+
+      <p>Take a look at the source of this page and find the JSON-LD!</p>
+    </div>
+  );
+}
+
+export default App;
+```
+
+If we look at the code above, we can see we're creating a JavaScript object literal named `articleStructuredData` which contains the data of an https://schema.org/Article.  `articleStructuredData` is then used to do two things:
+
+1. to contribute to the content of the page
+2. to render a JSON-LD script tag: `<script type="application/ld+json">` which is populated by calling `JSON.stringify(articleStructuredData)`
+
+When we run our site locally with `npm start` we see a simple article site that looks like this:
+
+![screenshot of article page](images/screenshot-of-article.png)
+
+Now let's see if it supports structured data in the way we hope.
+
+## Using the Rich Results Test
+
+If we go to https://search.google.com/test/rich-results we find the Rich Results Test tool. There's two ways you can test, providing a URL or providing code.  In our case we don't have a public facing URL and so we're going to use the HTML that React is rendering.
+
+In devtools we'll use the "copy outerHTML" feature to grab the HTML, then we'll paste it into Rich Results:
+
+![screenshot of rich results tool in code view](images/screenshot-of-rich-results-tool.png)
+
+We hit the "TEST CODE" button and we see results that look like this:
+
+![screenshot of the results of testing our site using the rich results tool](images/screenshot-of-rich-results-tool-test.png)
+
+
+
+
+
+
 Google do a good job of demostrating 
 
 https://developers.google.com/search/docs/advanced/structured-data/search-gallery
