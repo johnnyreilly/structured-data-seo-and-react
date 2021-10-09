@@ -26,10 +26,9 @@ general welcome
 
 - Blogging and open-source software
 
- - TypeScript
-   - DefinitelyTyped
-   - ts-loader
-   - fork-ts-checker-webpack-plugin
+- TypeScript: DefinitelyTyped / ts-loader etc
+
+- [contributed structure data support to Docusaurus](https://github.com/facebook/docusaurus/pull/5322)
 
 <aside class="notes">
 Hi everyone,
@@ -67,10 +66,11 @@ maintained by search engine folk
 ---
 
 <aside class="notes">
-various formats
+various formats - we'll look at JSON-LD
+they all live tucked away in your HTML
 </aside>
 
-## Formats
+## Three formats
 
 - [Microdata](https://en.wikipedia.org/wiki/Microdata_(HTML))
 - [RDFa](https://en.wikipedia.org/wiki/RDFa)
@@ -79,14 +79,12 @@ various formats
 ---
 
 <aside class="notes">
-various formats
+Google for "best brownie recipe"
 </aside>
 
-## Structured data formats
+## Structured data in action:
 
-- [Microdata](https://en.wikipedia.org/wiki/Microdata_(HTML))
-- [RDFa](https://en.wikipedia.org/wiki/RDFa)
-- [JSON-LD](https://en.wikipedia.org/wiki/JSON-LD) * ([Google's fave](https://www.searchenginejournal.com/google-structured-data-preference/297479/))
+### "Bring me your finest brownies"
 
 ---
 
