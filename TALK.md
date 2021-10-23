@@ -26,7 +26,7 @@ general welcome
 
 - Blogging and open-source software
 
-- [contributed initial structure data support to Docusaurus](https://github.com/facebook/docusaurus/pull/5322)
+- [contributed initial structured data support to Docusaurus](https://github.com/facebook/docusaurus/pull/5322)
 
 - TypeScript: DefinitelyTyped / ts-loader etc
 
@@ -37,6 +37,18 @@ My name is John Reilly and I'm a big fan of TypeScript.
 
 Structured data
 </aside>
+
+---
+
+<aside class="notes">
+Google for "best brownie recipe"
+
+This looks remarkably.... structured!
+</aside>
+
+## How does this work?
+
+![screenshot of Google search results for "best brownie recipe"](images/screenshot-of-rich-text-results.png)
 
 ---
 
@@ -76,23 +88,94 @@ they all live tucked away in your HTML
 
 ---
 
+## JSON-LD
+
+```html
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org/",
+    "@type": "Recipe",
+    "name": "Chocolate Brownie",
+    "author": {
+        "@type": "Person",
+        "name": "John Reilly"
+    },
+    "datePublished": "2014-09-01",
+    "description": "The most amazing chocolate brownie recipe",
+    "prepTime": "PT60M"
+}
+</script>
+```
+
+---
+
 <aside class="notes">
 Google for "best brownie recipe"
 </aside>
 
-## Structured data in action:
+### Structured data in action
 
-### "Bring me your finest brownies"
+<aside class="notes">
+powered by structured data.
+</aside>
 
-## The nuns with Structured Data
+![screenshot of google search results for "best brownie recipe" including a rich text results set at the top of the list showing recipes from various sources](images/screenshot-of-rich-text-results.png)
+
+---
+
+![](images/screenshot-bbc-good-food-brownies.png)
+
+https://www.bbcgoodfood.com/recipes/best-ever-chocolate-brownies-recipe
+
+---
+
+### Brownie source
+
+<aside class="notes">
+If we click on the first link, we're taken to the recipe in question. Looking at the HTML of that page we find a number of JSON-LD sections:
+</aside>
+
+![screenshot of JSON-LD sections in the BBC Good Food website](images/structured-data-in-action.png)
+
+---
+
+### Brownie source
+
+<aside class="notes">
+look at the `@type` property we can see it's a `"Recipe"`
+</aside>
+
+![screenshot of JSON-LD section transformed into a JavaScript Object Literal](images/single-structured-data-as-JSON.png)
+
+https://schema.org/Recipe
+
+---
+
+## Rich Results Test
 
 https://search.google.com/test/rich-results
-https://www.poorclaresarundel.org/
 
-### Structured Data and React
+---
+
+## React: add structured data support
+
+https://github.dev/johnnyreilly/structured-data-seo-and-react
+
+---
+
+## The convent with Structured Data
+
+- https://www.poorclaresarundel.org/
+- https://github.com/johnnyreilly/poor-clares-arundel-koa/pull/57
+
+---
+
+### Links
 
 - [Original blog post](https://blog.logrocket.com/react-structured-data-and-seo/)
 
 - [PR with initial structure data support to Docusaurus](https://github.com/facebook/docusaurus/pull/5322)
 
 - [Rich Results Test](https://search.google.com/test/rich-results)
+
+- [How Google uses structured data](https://developers.google.com/search/docs/advanced/structured-data/search-gallery)
