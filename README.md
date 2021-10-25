@@ -56,7 +56,7 @@ Incidentally, there's a special name for this "carousel"; it is a "rich result".
 Now we'll make ourselves a React app and add structured data to it.  In the console we'll execute the following command:
 
 ```
-npx create-react-app my-app
+npx create-react-app demo
 ```
 
 We now have a simple React app which consists of a single page. Let's replace the content of the existing `App.js` file with this:
