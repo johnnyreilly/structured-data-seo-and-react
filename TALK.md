@@ -151,6 +151,18 @@ https://schema.org/Recipe
 
 ---
 
+<aside class="notes">
+Google have first class support
+for certain structured data
+</aside>
+
+## Rich Results:
+#### how Google uses structured data
+
+https://developers.google.com/search/docs/advanced/structured-data/search-gallery
+
+---
+
 ## Rich Results Test
 
 https://search.google.com/test/rich-results
