@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// see it in action:
+// https://johnnyreilly.github.io/structured-data-seo-and-react/
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
