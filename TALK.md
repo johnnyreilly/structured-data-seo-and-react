@@ -169,16 +169,41 @@ https://search.google.com/test/rich-results
 
 ---
 
+<aside class="notes">
+When I wrote the original blog post
+I took a create-react-app
+and added structured data
+</aside>
+
 ## React: add structured data support
+
+[![screenshot of website with structured data](images/screenshot-of-article.png =700x)](https://johnnyreilly.github.io/structured-data-seo-and-react/)
+
+---
+
+<aside class="notes">
+When I wrote the original blog post
+I took a create-react-app
+and added structured data
+</aside>
+
+## view source
 
 https://github.dev/johnnyreilly/structured-data-seo-and-react
 
 ---
 
-## The convent with Structured Data
+## The convent with structured data
+
+<aside class="notes">
+What about a real website?
+I have an aunt that's a nun...
+Show rich results for the convent
+</aside>
 
 - https://www.poorclaresarundel.org/
-- https://github.com/johnnyreilly/poor-clares-arundel-koa/pull/57
+- [PR to add initial structured data](https://github.com/johnnyreilly/poor-clares-arundel-koa/pull/57)
+- [PR to add events structured data](https://github.com/johnnyreilly/poor-clares-arundel-koa/pull/58)
 
 ---
 
