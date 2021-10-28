@@ -60,7 +60,7 @@ We'll look at what Structured Data is, and build a simple React app with it
 </aside>
 
 ## Structured data:
-## speaking the secret language of Google
+## the secret categorisation language of Google
 
 ---
 
@@ -88,7 +88,7 @@ they all live tucked away in your HTML
 
 ---
 
-## JSON-LD
+## [JSON-LD: Recipe](https://schema.org/Recipe)
 
 ```html
 <script type="application/ld+json">
@@ -113,7 +113,8 @@ they all live tucked away in your HTML
 Google for "best brownie recipe"
 </aside>
 
-### Structured data in action
+### Structured data in action: 
+### "rich results"
 
 <aside class="notes">
 powered by structured data.
